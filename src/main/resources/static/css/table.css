@@ -1,0 +1,21 @@
+.table-container{
+    margin-top: 20px;
+    padding: 20px 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+.table-container table{
+    width: 100%;
+}
+.table-container table,tr,td,th,td{
+    border: 1px solid rgba(0,0,0,.3);
+    border-collapse: collapse;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.table-container th,td{
+    padding: 15px 0;
+}
+td{
+    text-align: center;
+}

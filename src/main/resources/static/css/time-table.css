@@ -1,0 +1,40 @@
+.time-table-box{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+}
+.time-table-content{
+    width: 98%;
+    margin: 25px auto;
+    background: white;
+    padding: 10px;
+}
+.time-table-content table{
+    width: 100%;
+}
+.time-table-content table,tr,td,th{
+    border:  1px solid rgba(0,0,0,.3);
+    border-collapse: collapse;
+    padding: 15px;
+}
+.tt-btngrp{
+    margin: 20px 10px;
+    text-align: right;
+}
+.tt-btngrp .dw,.tt-btngrp .cl{
+    outline: none;
+    border: none;
+    background: #015c5c;
+    color: white;
+    width: 150px;
+    padding: 10px;
+}
+.tt-btngrp .cl{
+    background: darkmagenta;
+}
+@keyframes animateTimeTable {
+    from{top:900px;}
+    to{top:0;}
+}

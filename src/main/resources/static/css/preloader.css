@@ -1,0 +1,63 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+figure{
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+    --clr:darkcyan;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+.pl{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+}
+.pl::before,.pl::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.pl::before{
+    background: var(--clr);
+}
+.pl:after{
+    background: white;
+    animation: animate 700ms infinite linear alternate;
+}
+.content-2::after{
+    animation: animate1 700ms .2s infinite linear alternate;
+}
+.content-3::after{
+    animation-delay: .4s;
+}
+.fo{
+    animation: animate2 450ms forwards;
+}
+@keyframes animate{
+    from{transform: scale(0);}
+    to{transform: scale(.9);}
+}
+@keyframes animate1{
+    from{transform: scale(.4);}
+    to{transform: scale(1);}
+}
+@keyframes animate2{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}

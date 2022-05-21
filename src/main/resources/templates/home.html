@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Schedule</title>
+    <link rel="stylesheet" th:href="@{/css/preloader.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/table.css}">
+    <link rel="stylesheet" th:href="@{/css/schedule.css}">
+    <link rel="stylesheet" th:href="@{/css/time-table.css}">
+    <script th:src="@{/js/home.js}" defer></script>
+    <script th:src="@{/js/modal.js}" defer></script>
+    <script th:src="@{/js/schedule.js}" defer></script>
+    <script th:src="@{/js/onload.js}" defer></script>
+</head>
+<body>
+    <!--   Pre loader -->
+    <!-- Start -->
+    <figure>
+        <div class="content-1 pl"></div>
+        <div class="content-2 pl"></div>
+        <div class="content-3 pl"></div>
+    </figure>
+    <!-- End -->
+    <header>
+        <h1>College Schedule</h1>
+    </header>
+    <main>
+        <button class="btn add">Add Teacher</button>
+        <button class="btn new">New Schedule</button>
+        <section class="table-container" draggable="false">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Subject Detail</th>
+                    <th>Edit / Delete</th>
+                </tr>
+                </thead>
+                <tbody id="show-teacher">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <!--  Modal-Box for Add and Update    -->
+    <!-- Start    -->
+    <div class="modal-box">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Add Teacher</h2>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post" id="add-form">
+                <div class="grid">
+                    <div class="fg">
+                        <label>Enter Name</label>
+                        <input type="text" class="if" name="name">
+                    </div>
+                    <div class="fg">
+                        <label>Courses</label>
+                        <span class="span-content">
+                            <span class="left-arrow"></span>
+                                <span class="cc">1</span>
+                             <span class="right-arrow"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-box">
+                <div id="select-box">
+
+                </div>
+                </div>
+                <div class="btn-group">
+                    <button type="submit">Save</button>
+                    <button id="close" type="button">Close</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- New schedule basic modal box    -->
+    <!-- Start   -->
+    <div class="schedule-box">
+        <div class="schedule-content">
+            <div class="schedule-header">
+                <h2>Basic Information</h2>
+            </div>
+            <form action="#" method="post" id="basic-info">
+            <div class="schedule-body">
+                <div class="fg">
+                    <label>Select Branch</label>
+                    <select name="sc-branch">
+                        <option value="">--select--</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Select Semester</label>
+                    <select name="sc-semester">
+                        <option value="">--select--</option>
+                    </select>
+                </div>
+                <div class="fg">
+                <label>Class Start Time</label>
+                <select name="start-time" id="start-time">
+                    <option value="8">8.00 AM</option>
+                    <option value="9">9.00 AM</option>
+                    <option value="10">10.00 AM</option>
+                </select>
+                </div>
+                <div class="fg">
+                    <label>Class End Time</label>
+                    <select name="end-time" id="end-time">
+                        <option value="15">3.00 PM</option>
+                        <option value="16">4.00 PM</option>
+                        <option value="17">5.00 PM</option>
+                    </select>
+                </div>
+
+                <div class="fg fg1">
+                    <label>Select Launch Time</label>
+                    <select name="launch" >
+                        <option value="12">12.00 PM</option>
+                        <option value="1">1.00 PM</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Class Duration</label>
+                    <select name="duration" id="duration">
+                        <option value="">--select--</option>
+                        <option value="40">40 Minute</option>
+                        <option value="50">50 Minute</option>
+                        <option value="60">60 Minute</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Number of Classes</label>
+                    <p>0</p>
+                </div>
+                <div class="btn-group1">
+                    <button type="submit">Create</button>
+                    <button type="button">Close</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <!-- End -->
+    <!-- Time Table -->
+    <!--  Start   -->
+    <div class="time-table-box">
+        <div class="time-table-content">
+            <table>
+                <thead>
+                    <tr>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="tt-btngrp">
+                <button class="dw">Download Time-Table</button>
+                <button class="cl">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!--  End  -->
+</body>
+</html>
